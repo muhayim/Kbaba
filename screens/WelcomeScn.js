@@ -1,5 +1,5 @@
 import React from 'react';
-import { View , StyleSheet , Image ,Button} from 'react-native';
+import { View , StyleSheet ,Button} from 'react-native';
 
 export const WelcomeScn = ({navigation}) => {
   return (

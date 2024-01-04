@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,7 +16,7 @@ function App() {
               <stack.Screen name="WelcomeScn" component={WelcomeScn} options={{headerShown : false}} />
               <stack.Screen name="Menu1" 
           component={Menu1} options={{
-            title: 'App Name', headerStyle: {backgroundColor: '#3498db'},headerTintColor: '#fff' }} />
+            title: 'App Name', headerStyle: {backgroundColor: '#000000'},headerTintColor: '#fff' }} />
             <stack.Screen name="CarSafe" component={CarSafe} options={{headerShown : false}} />
             <stack.Screen name="WheelSafe" component={WheelSafe} options={{headerShown : false}} />
             </stack.Navigator>

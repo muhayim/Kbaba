@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Text , View } from 'react-native';
 
-export const CarSafe = () => {
+
+const CarSafe = () => {
   return (
-    <View>I  say HI</View>
+    <View>
+      <Text> I  say HI</Text>
+      </View>
   )
 }
+
+
+export {CarSafe};

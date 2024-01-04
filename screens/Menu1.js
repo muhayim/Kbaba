@@ -1,54 +1,48 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
-import { Icon } from 'react-native-elements';
-import { CarSafe } from './CarSafe';
-import { WheelSafe } from './WheelSafe';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Image } from 'react-native-elements';
 
-export const Menu1 = ({ navigation }) => {
-  return (
+const Menu1 = ({ navigation }) => {
+ return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Image
-        source={{ uri: 'assets:/car.png' }}
-        style={{ width: 100, height: 100, margin: 10 }}
-      />
-      <Text>Welcome to your app!</Text>
+      
 
       <TouchableOpacity
-        style={{
-          backgroundColor: '#3498db',
-          borderRadius: 50,
-          padding: 10,
-          margin: 10,
-        }}
-        onPress={() => navigation.navigate('WheelSafe')}
+        style={styles.circularButton}
+        onPress={() => navigation.navigate('WheelSafe')} 
       >
-        <Icon name="heart" type="font-awesome" color="#fff" size={30} />
+       <Image
+          source={require('../assets/car.png')}
+          style={{ width: 50, height: 50 }}
+      />
+
+       
+        
       </TouchableOpacity>
 
-      <Image
-        source={{ uri: 'assets:/wheel.png' }}
-        style={{ width: 100, height: 100, margin: 10 }}
-      />
       <TouchableOpacity
-        style={{
-          backgroundColor: '#e74c3c',
-          borderRadius: 50,
-          padding: 10,
-          margin: 10,
-        }}
+        style={styles.circularButton}
         onPress={() => {
-          navigation.navigate('CarSafe');
+          navigation.navigate('CarSafe'); 
         }}
       >
-        <Icon name="star" type="font-awesome" color="#fff" size={30} />
+        <Image
+          source={require('../assets/wheel.png')}
+          style={{ width: 50, height: 50 }}
+      />
+
       </TouchableOpacity>
     </View>
-  );
+ );
 };
 
 const styles = StyleSheet.create({
-  backBtn: {
-    height: 70,
-    width: 70,
-  },
+ circularButton: {
+    borderRadius: 50,
+    padding: 10,
+    margin: 10,
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+ },
 });
+
+export { Menu1 };
