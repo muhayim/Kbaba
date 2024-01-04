@@ -1,11 +1,36 @@
 import React from 'react';
 import { View , StyleSheet , Image ,Button} from 'react-native';
 
-export const WelcomeScn = () => {
+export const WelcomeScn = ({navigation}) => {
   return (
-    <view>
+    <View style={styles.container}>
+     
 
-        <image />
-    </view>
+
+
+<Button
+  title="let's Get Started"
+  onPress={() => {
+    try {
+      navigation.navigate('Menu1');
+    } catch (error) {
+      console.error('Navigation error:', error);
+    }
+  }} />
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent:'center',
+        alignItems: 'center'
+    },
+
+    logo:{
+        width: 400,
+        height: 400
+
+    }
+})
