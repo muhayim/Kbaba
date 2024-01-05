@@ -9,11 +9,11 @@ const Menu1 = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.circularButton}
-        onPress={() => navigation.navigate('WheelSafe')} 
+        onPress={() => navigation.navigate('CarSafe')} 
       >
        <Image
           source={require('../assets/car.png')}
-          style={{ width: 50, height: 50 }}
+          style={{ width: 250, height: 250 , borderWidth:5 , borderRadius: 100}}
       />
 
        
@@ -23,12 +23,12 @@ const Menu1 = ({ navigation }) => {
       <TouchableOpacity
         style={styles.circularButton}
         onPress={() => {
-          navigation.navigate('CarSafe'); 
+          navigation.navigate('WheelSafe'); 
         }}
       >
         <Image
           source={require('../assets/wheel.png')}
-          style={{ width: 50, height: 50 }}
+          style={{ width: 250, height: 250 , borderWidth:5 , borderRadius: 100}}
       />
 
       </TouchableOpacity>

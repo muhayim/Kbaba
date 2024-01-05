@@ -17,8 +17,8 @@ function App() {
               <stack.Screen name="Menu1" 
           component={Menu1} options={{
             title: 'App Name', headerStyle: {backgroundColor: '#000000'},headerTintColor: '#fff' }} />
-            <stack.Screen name="CarSafe" component={CarSafe} options={{headerShown : false}} />
-            <stack.Screen name="WheelSafe" component={WheelSafe} options={{headerShown : false}} />
+            <stack.Screen name="CarSafe" component={CarSafe} options={{ title: 'Car Safe', headerStyle: {backgroundColor: '#000000'},headerTintColor: '#fff' }} />
+            <stack.Screen name="WheelSafe" component={WheelSafe} options={{ title: 'Wheel Safe', headerStyle: {backgroundColor: '#000000'},headerTintColor: '#fff' }}  />
             </stack.Navigator>
           </NavigationContainer>
   );
