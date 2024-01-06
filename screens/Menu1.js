@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View,Text , TouchableOpacity,ImageBackground } from 'react-native';
 import { Image } from 'react-native-elements';
 
 const Menu1 = ({ navigation }) => {
  return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+
+     <ImageBackground 
+     source={require('../assets/screen1.png')} 
+     resizeMode="cover" 
+     style={styles.image}>
+
+
+     </ImageBackground>
       
 
       <TouchableOpacity
@@ -13,12 +21,18 @@ const Menu1 = ({ navigation }) => {
       >
        <Image
           source={require('../assets/car.png')}
-          style={{ width: 250, height: 250 , borderWidth:5 , borderRadius: 100}}
+          style={{ width: 100, height: 100 , borderWidth:5 , borderRadius: 100}}
       />
 
        
         
       </TouchableOpacity>
+      <Text>
+       Car  Safe
+      </Text>
+      <Text>
+        
+      </Text>
 
       <TouchableOpacity
         style={styles.circularButton}
@@ -28,7 +42,7 @@ const Menu1 = ({ navigation }) => {
       >
         <Image
           source={require('../assets/wheel.png')}
-          style={{ width: 250, height: 250 , borderWidth:5 , borderRadius: 100}}
+          style={{ width: 100, height: 100 , borderWidth:5 , borderRadius: 100}}
       />
 
       </TouchableOpacity>
