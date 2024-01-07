@@ -2,9 +2,10 @@ import React from 'react';
 import { StyleSheet, View,Text , TouchableOpacity,ImageBackground } from 'react-native';
 import { Image } from 'react-native-elements';
 
+
 const Menu1 = ({ navigation }) => {
  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View   style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 
      <ImageBackground 
      source={require('../assets/screen1.png')} 
@@ -12,7 +13,7 @@ const Menu1 = ({ navigation }) => {
      style={styles.image}>
 
 
-     </ImageBackground>
+    
       
 
       <TouchableOpacity
@@ -27,12 +28,12 @@ const Menu1 = ({ navigation }) => {
        
         
       </TouchableOpacity>
-      <Text>
+      <Text style={styles.headingText}>
        Car  Safe
       </Text>
-      <Text>
-      Empower your journey with the convenience of on-demand car services, {'\n'}
-      bringing the expertise of a mobile car mechanic directly to your doorstep, {'\n'}
+      <Text  style={styles.descriptionText}>
+      Empower your journey with the convenience of on-demand car services,
+      bringing the expertise of a mobile car mechanic directly to your doorstep, 
       ensuring your road adventures stay smooth and worry-free.
       </Text>
 
@@ -48,10 +49,31 @@ const Menu1 = ({ navigation }) => {
       />
 
       </TouchableOpacity>
-<Text>Wheel Safe</Text>
-<Text>Seamless journeys await with our app's on-road services—experience {'\n'}
-the ease of mobile tire care and expert assistance for a worry-free drive.{'\n'}
+      <Text style={styles.headingText}>Wheel Safe</Text>
+      <Text  style={styles.descriptionText}>Seamless journeys await with our app's on-road services—experience 
+the ease of mobile tire care and expert assistance for a worry-free drive.
  Your travels, our priority, right at your fingertips.</Text>
+
+<TouchableOpacity style={styles.circularButton}
+onPress={() => {
+  navigation.navigate('HowToUse'); 
+}}>
+
+  <Image 
+  source={require("../assets/qstn.png")}
+  style={styles.circularButton}/>
+</TouchableOpacity>
+
+
+
+
+
+
+
+ </ImageBackground>
+
+
+
 
     </View>
  );
@@ -64,6 +86,16 @@ const styles = StyleSheet.create({
     margin: 10,
     backgroundColor: 'rgba(0, 0, 0, 0)',
  },
+ headingText: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  marginTop: 10,
+},
+descriptionText: {
+  textAlign: 'center',
+  marginHorizontal: 20,
+  marginBottom: 20,
+}
 });
 
 export { Menu1 };
