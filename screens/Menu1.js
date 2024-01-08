@@ -4,7 +4,7 @@ import { Image } from 'react-native-elements';
 
 const Menu1 = ({ navigation }) => {
   return (
-    <ScrollView style={styles.Sview}>
+    <ScrollView contentContainerStyle={styles.Sview}>
       <TouchableOpacity
         style={styles.circularButton}
         onPress={() => navigation.navigate('CarSafe')}
@@ -38,8 +38,9 @@ const Menu1 = ({ navigation }) => {
       <TouchableOpacity style={styles.circularButton} onPress={() => { navigation.navigate('HowToUse'); }}>
         <Image
           source={require('../assets/qstn.png')}
-          style={styles.circularButton}
+          style={{ width: 100, height: 100, borderWidth: 5, borderRadius: 100 }}
         />
+        <Text style={styles.headingText}>How To Use?</Text>
       </TouchableOpacity>
     </ScrollView>
   );
