@@ -1,7 +1,7 @@
 import React from 'react';
 import { View,Text } from 'react-native';
 
-export const HowToUse = () => {
+export const ShopStore = () => {
   return (
     <View>
         <Text>
