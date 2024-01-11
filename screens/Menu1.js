@@ -1,111 +1,97 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { Image } from "react-native-elements";
+
+
+
 
 const Menu1 = ({ navigation }) => {
   const renderGridItems = () => {
     const gridItems = [
-      { key: 1, label: "Car Safe", imageSource: require("../assets/car.png") },
-      {
-        key: 2,
-        label: "Wheel Safe",
-        imageSource: require("../assets/wheel.png"),
-      },
-      {
-        key: 3,
-        label: "Shop Store",
-        imageSource: require("../assets/shop.png"),
-      },
-      {
-        key:4,
-        label:"How To Use",
-        imageSource: require("../assets/qstn.png")
-      }
+      { key: 1, label: "Car Safe", imageSource: require("../assets/car.png"), source: "CarSafe" },
+      { key: 2, label: "Wheel Safe", imageSource: require("../assets/wheel.png"), source: "WheelSafe" },
+      { key: 3, label: "Shop Store", imageSource: require("../assets/shop.png"), source: "ShopStore" },
+      { key: 4, label: "How To Use", imageSource: require("../assets/qstn.png"), source: "WelcomeScn" },
     ];
 
     return gridItems.map((item) => (
-      <TouchableOpacity
+      <View style={styles.scrollView }><TouchableOpacity
         key={item.key}
         style={styles.gridItem}
-        onPress={() => navigation.navigate(item.label)}
+        onPress={() => navigation.navigate(item.source)}
       >
         <Image source={item.imageSource} style={styles.imageStyle} />
-        <Text style={styles.labelText}>{item.label}</Text>
+        
       </TouchableOpacity>
+      </View>
     ));
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollView}>
-      <View style={styles.rowContainer}>
-        <TouchableOpacity
-          style={styles.circularButton}
-          onPress={() => navigation.navigate("CarSafe")}
-        >
-          <Image
-            source={require("../assets/car.png")}
-            style={styles.imageGrid}
-          />
-          <Text style={styles.labelText}>Car Safe</Text>
-        </TouchableOpacity>
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <View style={styles.rowContainer}>
+          <TouchableOpacity
+            style={styles.circularButton}
+            onPress={() => navigation.navigate("CarSafe")}
+          >
+            <Image source={require("../assets/car.png")} style={styles.imageGrid} />
+            <Text style={styles.labelText}>Car Safe</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.circularButton}
-          onPress={() => {
-            navigation.navigate("WheelSafe");
-          }}
-        >
-          <Image
-            source={require("../assets/wheel.png")}
-            style={styles.imageGrid}
-          />
-          <Text style={styles.labelText}>Wheel Safe</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.circularButton}
+            onPress={() => {
+              navigation.navigate("WheelSafe");
+            }}
+          >
+            <Image source={require("../assets/wheel.png")} style={styles.imageGrid} />
+            <Text style={styles.labelText}>Wheel Safe</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.circularButton}
-          onPress={() => {
-            navigation.navigate("ShopStore");
-          }}
-        >
-          <Image
-            source={require("../assets/shop.png")}
-            style={styles.imageGrid}
-          />
-          <Text style={styles.labelText}>Shop Store</Text>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity
+            style={styles.circularButton}
+            onPress={() => {
+              navigation.navigate("ShopStore");
+            }}
+          >
+            <Image source={require("../assets/shop.png")} style={styles.imageGrid} />
+            <Text style={styles.labelText}>Shop Store</Text>
+          </TouchableOpacity>
+        </View>
 
-      <View style={styles.gridContainer}>{renderGridItems()}</View>
-    </ScrollView>
+        <View style={styles.gridContainer}>{renderGridItems()}</View>
+      </ScrollView>
+
+      
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   circularButton: {
     borderRadius: 50,
     padding: 10,
     margin: 10,
+    marginTop: 50,
     backgroundColor: "rgba(0, 0, 0, 0)",
     alignItems: "center",
   },
   gridItem: {
-    flexBasis: "30%",
-    margin: 10,
+    flexBasis: "40%",
     alignItems: "center",
+    marginBottom: 10,
+    backgroundColor : '#FFC107',
+    margin:5
   },
   imageStyle: {
-    width: 70,
-    height: 70,
+    width: 140,
+    height: 140,
     borderWidth: 3,
-    margin:5
-    
+   
   },
   imageGrid: {
     width: 70,
@@ -125,11 +111,16 @@ const styles = StyleSheet.create({
   gridContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-around",
+    justifyContent: "center",
     marginTop: 20,
   },
   scrollView: {
     marginTop: 20,
+  },
+  screen: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

@@ -20,11 +20,7 @@ function App() {
         <stack.Screen
           name="Menu1"
           component={Menu1}
-          options={{
-            title: "Trip Savr",
-            headerStyle: { backgroundColor: "#000000" },
-            headerTintColor: "#fff",
-          }}
+          options={{ headerShown: false }}
         />
         <stack.Screen
           name="CarSafe"
