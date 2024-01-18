@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   quote: {
     fontSize: 25,
     fontWeight:'bold',
-    marginHorizontal: 10,
+    marginHorizontal:  10, 
   },
   listItem: {
     fontSize: 18,
