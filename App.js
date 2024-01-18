@@ -6,23 +6,31 @@ import { Menu1 } from "./screens/Menu1";
 import { CarSafe } from "./screens/CarSafe";
 import { WheelSafe } from "./screens/WheelSafe";
 import { ShopStore } from "./screens/ShopStore";
+import { Launch } from "./screens/Launch";
+import { VFind } from "./screens/VFind"; // Update the import
 
-const stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
+
 function App() {
   return (
     <NavigationContainer>
-      <stack.Navigator initialRouteName="WelcomeScn">
-        <stack.Screen
+      <Stack.Navigator initialRouteName="Launch">
+        <Stack.Screen
+          name="Launch"
+          component={Launch}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="WelcomeScn"
           component={WelcomeScn}
           options={{ headerShown: false }}
         />
-        <stack.Screen
+        <Stack.Screen
           name="Menu1"
           component={Menu1}
           options={{ headerShown: false }}
         />
-        <stack.Screen
+        <Stack.Screen
           name="CarSafe"
           component={CarSafe}
           options={{
@@ -31,7 +39,7 @@ function App() {
             headerTintColor: "#fff",
           }}
         />
-        <stack.Screen
+        <Stack.Screen
           name="WheelSafe"
           component={WheelSafe}
           options={{
@@ -40,7 +48,7 @@ function App() {
             headerTintColor: "#fff",
           }}
         />
-        <stack.Screen
+        <Stack.Screen
           name="ShopStore"
           component={ShopStore}
           options={{
@@ -49,7 +57,16 @@ function App() {
             headerTintColor: "#fff",
           }}
         />
-      </stack.Navigator>
+        <Stack.Screen
+          name="VFind"
+          component={VFind}
+          options={{
+            title: "VFind",
+            headerStyle: { backgroundColor: "#000000" },
+            headerTintColor: "#fff",
+          }}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
