@@ -7,7 +7,7 @@ import {
   FlatList,
 } from "react-native";
 import { Image } from "react-native-elements";
-import { Title } from "react-native-paper";
+
 
 const Menyu1 = ({ navigation }) => {
   const data = [

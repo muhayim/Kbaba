@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
-const Launch = ({ navigation }) => {
+const Launch1 = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       try {
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export {Launch};
+export {Launch1};

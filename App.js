@@ -6,7 +6,7 @@ import { Menu1 } from "./screens/Menu1";
 import { CarSafe } from "./screens/CarSafe";
 import { WheelSafe } from "./screens/WheelSafe";
 import { ShopStore } from "./screens/ShopStore";
-import { Launch } from "./screens/Launch";
+import { Launch1 } from "./screens/Launch1";
 import { VFind } from "./screens/VFind"; // Update the import
 import { Menyu1 } from "./screens/Menyu1";
 
@@ -15,10 +15,10 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Launch">
+      <Stack.Navigator initialRouteName="Launch1">
         <Stack.Screen
-          name="Launch"
-          component={Launch}
+          name="Launch1"
+          component={Launch1}
           options={{ headerShown: false }}
         />
         <Stack.Screen
