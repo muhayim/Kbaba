@@ -5,7 +5,7 @@ const Launch = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       try {
-        navigation.navigate('Menu1');
+        navigation.navigate('Menyu1');
       } catch (error) {
         console.error('Navigation error:', error);
       }

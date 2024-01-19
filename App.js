@@ -8,6 +8,7 @@ import { WheelSafe } from "./screens/WheelSafe";
 import { ShopStore } from "./screens/ShopStore";
 import { Launch } from "./screens/Launch";
 import { VFind } from "./screens/VFind"; // Update the import
+import { Menyu1 } from "./screens/Menyu1";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,11 @@ function App() {
         <Stack.Screen
           name="WelcomeScn"
           component={WelcomeScn}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Menyu1"
+          component={Menyu1}
           options={{ headerShown: false }}
         />
         <Stack.Screen
