@@ -73,7 +73,7 @@ const Menyu1 = ({ navigation }) => {
           data={data}
           renderItem={renderItem}
           keyExtractor={keyExtractor}
-          numColumns={3} // Adjust the number of columns as needed
+          numColumns={3} 
         />
       </View>
     </View>
@@ -97,15 +97,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
+    padding: 30,
   },
   image: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
     borderRadius: 50,
-    margin: 5,
     borderWidth: 1,
     borderColor: "white",
+    margin:5,
+    marginLeft:1,
+   
   },
   textcolor: {
     color: "white",
