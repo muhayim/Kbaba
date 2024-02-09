@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+import { Searchbar } from "react-native-paper";
 import { Image } from "react-native-elements";
 
 
@@ -13,9 +14,9 @@ const Menyu1 = ({ navigation }) => {
   const data = [
     {
       key: 1,
-      label: "Car Safe",
+      label: "Road Fix",
       imageSource: require("../assets/car.png"),
-      source: "CarSafe",
+      source: "RoadFix",
     },
     {
       key: 2,
@@ -54,8 +55,9 @@ const Menyu1 = ({ navigation }) => {
       <View>
         <TouchableOpacity onPress={() => navigation.navigate(item.source)}>
           <Image source={item.imageSource} style={styles.image} />
+          <Text>{item.label}</Text>
         </TouchableOpacity>
-        <Text>{item.label}</Text>
+        
       </View>
     );
   };
@@ -64,8 +66,12 @@ const Menyu1 = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topHalf}>
-        <Text>HI</Text>
+      < View style={styles.topHalf}>
+      <Searchbar
+      placeholder="Search Vehicle"
+      
+    />
+
       </View>
 
       <View style={styles.bottomHalf}>

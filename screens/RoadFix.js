@@ -2,11 +2,11 @@ import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 
-const CarSafe = ({ navigation }) => {
+const RoadFix = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <Text style={styles.quote}>
-        Car Safe  is  a  brand new utility    that  enables you to   access   automobile services at
+        Car Safe is a brand new utility that enables you to access automobile services at
         the tip of your finger. {'\n'}
         {'\n'}
       </Text>
@@ -20,8 +20,8 @@ const CarSafe = ({ navigation }) => {
       </Text>
       <Text style={styles.loginText}>Login to continue...</Text>
       <Button
-        title="Login                "
-        onPress={() => navigation.navigate('Menu1')}
+        title="Login"
+        onPress={() => navigation.navigate('RoadFixLogin')}
         buttonStyle={styles.loginButton}
       />
     </View>
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   },
   quote: {
     fontSize: 25,
-    fontWeight:'bold',
-    marginHorizontal:  10, 
+    fontWeight: 'bold',
+    marginHorizontal: 10,
   },
   listItem: {
     fontSize: 18,
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { CarSafe };
+export { RoadFix };

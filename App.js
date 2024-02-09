@@ -2,13 +2,14 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { WelcomeScn } from "./screens/WelcomeScn";
-import { Menu1 } from "./screens/Menu1";
-import { CarSafe } from "./screens/CarSafe";
+import {RoadFixLogin}  from "./screens/RoadFixLogin"
+import { RoadFix } from "./screens/RoadFix";
 import { WheelSafe } from "./screens/WheelSafe";
 import { ShopStore } from "./screens/ShopStore";
 import { Launch1 } from "./screens/Launch1";
-import { VFind } from "./screens/VFind"; // Update the import
+import { VFind } from "./screens/VFind";
 import { Menyu1 } from "./screens/Menyu1";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -32,13 +33,13 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Menu1"
-          component={Menu1}
+          name="RoadFixLogin"
+          component={RoadFixLogin}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="CarSafe"
-          component={CarSafe}
+          name="RoadFix"
+          component={RoadFix}
           options={{
             title: "Car Safe",
             headerStyle: { backgroundColor: "#000000" },
