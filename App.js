@@ -9,6 +9,7 @@ import { ShopStore } from "./screens/ShopStore";
 import { Launch1 } from "./screens/Launch1";
 import { VFind } from "./screens/VFind";
 import { Menyu1 } from "./screens/Menyu1";
+import { RoadFixVerify } from "./screens/RoadFixVerify";
 
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +36,11 @@ function App() {
         <Stack.Screen
           name="RoadFixLogin"
           component={RoadFixLogin}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RoadFixVerify"
+          component={RoadFixVerify}
           options={{ headerShown: false }}
         />
         <Stack.Screen

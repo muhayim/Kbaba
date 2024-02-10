@@ -15,7 +15,7 @@ const Launch1 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../assets/m3inv.png')}
+        source={require('../assets/m3logo.png')}
         style={styles.logo}
         resizeMode="contain" 
       />
@@ -26,7 +26,7 @@ const Launch1 = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'violet',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
