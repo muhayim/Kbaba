@@ -20,14 +20,14 @@ const Menyu1 = ({ navigation }) => {
     },
     {
       key: 2,
-      label: "Wheel Safe",
+      label: "Wheel Fix",
       imageSource: require("../assets/wheel.png"),
-      source: "WheelSafe",
+      source: "WheelFix",
     },
     {
       key: 3,
       label: "Shop Store",
-      imageSource: require("../assets/shop.png"),
+      imageSource: require("../assets/Shopwhite.png"),
       source: "ShopStore",
     },
     {

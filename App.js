@@ -2,15 +2,16 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { WelcomeScn } from "./screens/WelcomeScn";
-import {RoadFixLogin}  from "./screens/RoadFixLogin"
+import { RoadFixLogin } from "./screens/RoadFixLogin";
 import { RoadFix } from "./screens/RoadFix";
-import { WheelSafe } from "./screens/WheelSafe";
+import { WheelFix } from "./screens/WheelFix";
 import { ShopStore } from "./screens/ShopStore";
 import { Launch1 } from "./screens/Launch1";
 import { VFind } from "./screens/VFind";
 import { Menyu1 } from "./screens/Menyu1";
 import { RoadFixVerify } from "./screens/RoadFixVerify";
-
+import { WheelFixLogin } from "./screens/WheelFixLogin";
+import { WheelFixVerify } from "./screens/WheelFixVerify";
 
 const Stack = createNativeStackNavigator();
 
@@ -53,8 +54,8 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="WheelSafe"
-          component={WheelSafe}
+          name="WheelFix"
+          component={WheelFix}
           options={{
             title: "Wheel Safe",
             headerStyle: { backgroundColor: "#000000" },
@@ -62,12 +63,20 @@ function App() {
           }}
         />
         <Stack.Screen
+          name="WheelFixLogin"
+          component={WheelFixLogin}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="WheelFixVerify"
+          component={WheelFixVerify}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="ShopStore"
           component={ShopStore}
           options={{
-            title: "How To Use",
-            headerStyle: { backgroundColor: "#000000" },
-            headerTintColor: "#fff",
+            headerShown:false
           }}
         />
         <Stack.Screen

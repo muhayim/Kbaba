@@ -1,12 +1,31 @@
 import React from 'react';
-import { View,Text } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
-export const ShopStore = () => {
+const ShopStore = () => {
   return (
-    <View>
-        <Text>
-            You reached here asshole!!
-        </Text>
+    <View style={styles.container}>
+      <Text style={styles.message}>
+        Our online shop is under construction! 
+        {'\n\n'}
+        Stay tuned for an amazing shopping experience!
+      </Text>
     </View>
-  )
-}
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    backgroundColor: '#fff', // background color
+  },
+  message: {
+    fontSize: 20,
+    textAlign: 'center',
+    color: '#333', // text color
+  },
+});
+
+export {ShopStore}
