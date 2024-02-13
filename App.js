@@ -12,6 +12,7 @@ import { Menyu1 } from "./screens/Menyu1";
 import { RoadFixVerify } from "./screens/RoadFixVerify";
 import { WheelFixLogin } from "./screens/WheelFixLogin";
 import { WheelFixVerify } from "./screens/WheelFixVerify";
+import { AllServices } from "./screens/AllServices";
 
 const Stack = createNativeStackNavigator();
 
@@ -83,9 +84,14 @@ function App() {
           name="VFind"
           component={VFind}
           options={{
-            title: "VFind",
-            headerStyle: { backgroundColor: "#000000" },
-            headerTintColor: "#fff",
+            headerShown:false
+          }}
+        />
+        <Stack.Screen
+          name="AllServices"
+          component={AllServices}
+          options={{
+            headerShown:false
           }}
         />
       </Stack.Navigator>

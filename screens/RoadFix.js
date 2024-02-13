@@ -10,7 +10,7 @@ const RoadFix = ({ navigation }) => {
         the tip of your finger. {'\n'}
         {'\n'}
       </Text>
-      <Image source={require('../assets/car.png')} style={styles.logo} />
+      <Image source={require('../assets/CarBlack.png')} style={styles.logo} />
       <Text>Car Safe services include:</Text>
 
       <Text style={styles.listItem}>
